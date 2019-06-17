@@ -1,0 +1,121 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Dịch Vụ Cho Thuê Xe Ô Tô</title>
+    <link href="~/Content/CSS_User/index.css" rel="stylesheet" />
+    <link href="~/Content/CSS_User/SpryMenuBarHorizontal.css" rel="stylesheet" />
+    <script src="~/Content/CSS_User/SpryMenuBar.js"></script>
+</head>
+<body>
+        <div class="wapper">
+            <div class="banner">
+                <img src="~/Content/Images/Banner/bao-hiem-vat-chat-o-to-bao-viet-co-dac-diem-gi.jpg" height="400" width="1200" />
+            </div>
+            <div class="clear"></div>
+            <!------------------------------------------------------------------------------------------------->
+            <div class="menubar">
+                <ul id="MenuBar1" class="MenuBarHorizontal">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li>
+                        <a class="MenuBarItemSubmenu" href="#">Hình thức thuê</a>
+                        <ul>
+                            <li><a href="#">Tự lái</a></li>
+                            <li><a href="#">Tài riêng</a></li>
+                            <li><a href="#">Xe tháng</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="MenuBarItemSubmenu" href="#">Bản giá</a>
+                        <ul>
+                            <li><a href="#">Giá xe tự lái</a></li>
+                            <li><a href="#">Giá xe có tài</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ý kiến Khách Hàng</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                </ul>
+
+            </div>
+            <div class="clear"></div>
+            <!------------------------------------------------------------------------------------------------->
+          <div style="padding-top: 5px ; padding-bottom:5px"></div>
+              <!------------------------------------------------------------------------------------------------->
+            <div class="content">           
+                <div class="content_left">
+                  
+                    <div class="content_left1">
+                        
+                        <div class="center_1">
+                            @RenderBody()                        
+                        </div>
+                    </div>
+                </div>
+                <div class="content_right">
+                    <!---------------->
+                    <div class="right_1">
+                        <div class="content_top_1">
+                            @Html.Action("LoaiChoNgoi","IndexThueXe")
+                        </div>
+                    </div>
+                    <!---------------->
+                    <div class="right_2">
+                        <div class="content_top_1">
+                            @Html.Action("LoaiHangXe", "IndexThueXe")
+                        </div>
+                    </div>
+                    <!---------------->
+                    <div class="right_3">
+                        <div class="backroud_right_1">
+                            <div class="login">Đăng nhập</div>
+                        </div>
+                        <div class="content_top_3">
+                            <form id="form1" name="form1" method="post" action="">
+                                <div style="padding-top:10px">
+                                    <div class="ac_1">Đăng nhập:</div>
+                                    <div class="ac_2">
+                                        <input type="text" name="textfield" id="textfield" />
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <div style="padding-top:10px">
+                                    <div class="pass_1">Mật khẩu:</div>
+                                    <div class="pass_2">
+                                        <input type="password" name="textfield2" id="textfield2" />
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <input name="btn_login" type="submit" value="Đăng nhập" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!---------------->
+                </div>
+            </div>
+            <div class="clear"></div>
+            <!------------------------------------------------------------------------------------------------->
+            <div class="footter">
+                <h2>DỊCH VỤ CHO THUÊ XE Ô TÔ</h2>
+                <div>Trần Tú Trọng</div>
+                <div>
+                    <p><strong>1611061274</strong>Lê Văn Khương, Phường Thới An, Quận 12, Tp.HCM</p>
+                    <p>Tel: (+84)949696619</p>
+                </div>
+            </div>
+      </div>
+            <!---------------  End  ---->
+        </div>
+        <script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+        </script>
+    </body>
+</html>
+

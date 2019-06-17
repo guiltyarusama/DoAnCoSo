@@ -1,0 +1,16 @@
+﻿@model IEnumerable<MVC_Thue_Oto.Models.HangXe>
+
+<div class="backroud_right_1">
+    <div class="color_top1_r">Dòng Xe</div>
+</div>
+@foreach (var item in Model)
+{
+    <div>
+        <a href="@Url.Action("TheoDongXe","IndexThueXe",new{id = item.MaHang})" class="list-group-item list assad_1">
+            <div style="padding-left:20px; border:1px solid ; padding-bottom:5px; padding-top:5px">
+                @item.TenHang
+            </div>
+        </a>
+    </div>
+    <div class="clear"></div>
+}

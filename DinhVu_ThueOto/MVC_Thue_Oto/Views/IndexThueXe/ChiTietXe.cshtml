@@ -1,0 +1,51 @@
+﻿
+@model IEnumerable<MVC_Thue_Oto.Models.XeDichVu>
+<style type="text/css">
+    #Datmua a {
+        clear: both;
+        background-color: red;
+        color: white;
+        width: 120px;
+        height: 35px;
+        display: block;
+        float: right;
+        text-align: center;
+        padding-top: 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        #Datmua a:hover {
+            background-color: gray;
+            color: red;
+        }
+</style>
+@{
+    ViewBag.Title = "ChiTietXe";
+    Layout = "~/Views/Shared/_PlayOutUser.cshtml";
+}
+
+<h2>Thông Tin Chi Tiết Xe</h2>
+@foreach (var item in Model)
+{
+    <div>
+        <div style="width:40%; float:left; border-left: dotted 1px; border-color:azure">
+            <img src="~/Content/Images/Images_Car/@item.TenHinh" width="100%" />
+        </div>
+        <div style="width:60%; float:left; padding:10px">
+            <h4 style="font-weight:bold; color:red">Tên sách: @item.TenXe </h4>
+            <p style="text-align:justify"><Span style="font-weight:bold"></Span>@item.ThongTinHopSo</p>
+            <p style="text-align:justify"><Span style="font-weight:bold"></Span>@item.NhienLieuTP</p>
+            <p style="text-align:justify"><Span style="font-weight:bold"></Span>@item.NhienLieuNTP</p>
+        </div>
+        <div>
+            <div id="Datmua">
+                <a href="@Url.Action("AddToCard", "ShoppingCard", new { id = @item.MaDVXe })" class="list-group-item">
+                    Đặt xe
+                </a>
+            </div>
+        </div>
+    </div>
+}
+
+

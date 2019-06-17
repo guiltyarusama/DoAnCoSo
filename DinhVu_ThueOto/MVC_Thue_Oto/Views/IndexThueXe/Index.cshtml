@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MVC_Thue_Oto.Models.XeDichVu>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PlayOutUser.cshtml";
+}
+
+<div class="top_1">
+    <div class="color_top1">
+        Các xe được thuê nhiếu
+    </div>
+</div>
+@foreach (var item in Model) {
+
+        <div class="car">
+            <a href="@Url.Action("ChiTietXe","IndexThueXe",new{id = item.MaDVXe})" class="list-group-item list assad_1">
+                <div class="img">
+                    <img alt="@item.TenHinh" src="~/Content/Images/Images_Car/@item.TenHinh" height="250" width="270" />
+                </div>
+                <div class="content_car1">@item.TenXe</div>
+       </a>
+</div>
+}
+
